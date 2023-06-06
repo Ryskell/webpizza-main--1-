@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{% static 'applipizza/css/styles.css' %}">
+        <link rel="icon" href="{% static 'applipizza/img/pizza.png' %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>{% block title %} {% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <img src="https://i.pinimg.com/originals/46/cd/86/46cd86a0fb4f9ad740166755a6698964.png">
+                <div class="collapse navbar-collapse" id="navbarNav" style="width: max-content;">
+                    <div style="margin:auto;">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                              <a class="nav-link" href="/pizzas/">Pizzas </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="/ingredients/">Ingredients</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/ingredients/add/">Création d'Ingredients</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/pizzas/add/">Création d'une Pizza</a>
+                            </li>
+                          </ul>
+                    </div>
+                </div>
+                <img src="https://i.pinimg.com/originals/46/cd/86/46cd86a0fb4f9ad740166755a6698964.png" style="visibility: hidden;">
+              </nav>
+        </header>
+        <main>
+            {% block content %} {% endblock %}
+        </main>
+        <footer>
+            <div class="footer-content">
+                <h3>Appli Pizza 2023</h3>
+            </div>
+        </footer>
+    </body>
+</html>

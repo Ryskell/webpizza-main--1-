@@ -1,0 +1,17 @@
+{% extends 'applipizza/base.html' %}
+
+{% block title %}
+création d'une pizza
+{% endblock %}
+
+{% block content %}
+<br>
+<div class="container">
+    <h2>Création d'une pizza</h2>
+    <form action="/pizzas/create/" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Envoyer">
+    </form>
+</div>
+{% endblock %}

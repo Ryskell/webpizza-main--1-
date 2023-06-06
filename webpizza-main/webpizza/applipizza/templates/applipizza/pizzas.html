@@ -1,0 +1,17 @@
+{% extends 'applipizza/base.html' %}
+
+{% block title %}
+les pizzas
+{% endblock %}
+
+{% block content %}
+<br>
+<div class="container">
+    <h2>voici nos {{ pizzas|length }} pizzas</h2>
+    <ul>
+        {% for piz in pizzas %}
+        <li>{{ piz }} | <a href="/pizzas/{{piz.idPizza}}/">détails sur cette pizza</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
